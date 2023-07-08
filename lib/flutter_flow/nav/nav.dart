@@ -50,6 +50,21 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'payment',
           path: '/payment',
           builder: (context, params) => PaymentWidget(),
+        ),
+        FFRoute(
+          name: 'DashCounter',
+          path: '/dashCounter',
+          builder: (context, params) => DashCounterWidget(),
+        ),
+        FFRoute(
+          name: 'DashUpgrades',
+          path: '/dashUpgrades',
+          builder: (context, params) => DashUpgradesWidget(),
+        ),
+        FFRoute(
+          name: 'DashPurchases',
+          path: '/dashPurchases',
+          builder: (context, params) => DashPurchasesWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
